@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+.gallery-container {
+  width: min(100% - 32px, 1000px);
+  margin: 40px auto;
+}
+
+.gallery-container h1 {
+  margin-bottom: 8px;
+}
+
+.gallery-container > p {
+  color: #666;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 24px 0;
+  padding: 12px;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0 32px;
+}
+
+.image-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 5%);
+}
+
+.image-card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.image-card p {
+  margin: 12px;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.image-card small {
+  display: block;
+  margin: 0 12px 12px;
+  color: #666;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc2626 !important;
+  font-weight: bold;
+}
+
+.progress-section {
+  margin: 24px 0;
+}
+
+progress {
+  width: 100%;
+  height: 18px;
+}
